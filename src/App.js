@@ -1,5 +1,8 @@
 import logo from './logo.svg';
+import useApplicationData from './hooks/useApplicationData';
 import './App.css';
+
+// const { recipes } = useApplicationData();
 
 function App() {
   return (
