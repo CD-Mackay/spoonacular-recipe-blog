@@ -29,8 +29,12 @@ function showRecipes() {
     console.log(error);
   })
 }
+function getByIngredient(ingredient) {
+  return axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient}&apiKey=${process.env.REACT_APP_API_KEY}
+  `)
+}
 
-return { showRecipes, recipes }
+return { showRecipes, recipes, getByIngredient }
 }
 
 export default useApplicationData;
