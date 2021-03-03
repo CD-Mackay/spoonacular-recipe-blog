@@ -1,12 +1,13 @@
 import React from 'react';
 
 export default function RecipeShow(props) {
-
-  function displayRecipes() {
-    let recipes = props.recipes();
-    console.log(recipes);
-  }
+const displayedRecipes = props.recipes.map(recipe => {
+  return <ul><li>{recipe.title}</li></ul>
+})
   return (
-    <button onClick={displayRecipes}>Clickme!</button>
+    <div>
+    <button onClick={props.showRecipes} >Clickme!</button>
+    <div>{displayedRecipes}</div>
+    </div>
   )
 }

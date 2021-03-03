@@ -8,11 +8,11 @@ import './App.css';
 
 const App = () => {
 
-  const { recipes } = useApplicationData();
+  const { showRecipes, recipes } = useApplicationData();
 
   return (
     <div className="App">
-      <RecipeShow recipes={recipes} />
+      <RecipeShow recipes={showRecipes} recipes={recipes} />
     </div>
   );
 }
